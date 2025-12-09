@@ -28,8 +28,33 @@ let myObj = {
     study: "BCA",
 }
 
-const myFunction = function(){
-    console.log("Hello World!");
+const myFunction = function () {
+    // console.log("Hello World!");
 }
 
-console.log(typeof id);
+// console.log(typeof id);
+
+
+// ********* Stack and Heap **********
+
+// Stack (Primitive), Heap (Non-Primitive)
+
+let myYoutubeName = "Amos.ts"
+
+let anotherName = myYoutubeName
+anotherName = "ChangedName"
+
+
+console.log(myYoutubeName);
+console.log(anotherName);
+
+let userOne = {
+    email: "amos@gmail.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne
+userTwo.email = "coder@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
