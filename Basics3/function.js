@@ -41,4 +41,36 @@ function loginUserMessage(username = "Sam") { // if you cannot pass any value th
 
 // loginUserMessage("Coder") // Print nothing
 // console.log(loginUserMessage("Coder"));
-console.log(loginUserMessage("Amos")); // you pass nothing return undefined
+// console.log(loginUserMessage("Amos")); // if you pass nothing return undefined
+
+// function calculateCartPrice(...num1){ // used rest all the items are combined now
+function calculateCartPrice(val1, val2, ...num1) { // first two argument are val1, val2 and rest is num1
+    return num1
+}
+
+// console.log(calculateCartPrice(401, 200, 205, 219));
+
+const user = {
+    username: "Amos",
+    prices: 199,
+}
+
+function handleObject(anyobject) {
+    console.log(`Username is: ${anyobject.username} and Price is: ${anyobject.price}`);
+
+}
+
+// handleObject(user)
+handleObject({
+    username: "Sam",
+    price: 399,
+})
+
+const myNewArray = [100, 300, 230, 340]
+
+function returnValue(getArray){
+    return getArray[1]
+}
+
+// console.log(returnValue(myNewArray))
+console.log(returnValue([2300, 4280, 238470])) // We can pass like this also
