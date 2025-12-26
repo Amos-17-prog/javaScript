@@ -1,0 +1,72 @@
+How code execute
+
+# JavaScript execution context
+Global execution context -> this always involve
+
+Function/Functional execution context
+
+in Mongoose
+Eval execution context
+
+Phases
+1. Memory creation phases people says only creation phase
+It locates Memory location but doesnot execute
+variables 
+
+let val1 = 23;
+let val2 = 47;
+Function addNum(num1, num2){
+    let total = num2 + num2;
+    return total
+}
+let result1 = addNum(val1, val2)
+let result1 = addNum(30, 27
+// Aboves Codes demostration by line
+1. Global execution allocates on this
+2. Memory creation phase - it stores
+    val1 -> undefined
+    val2 -> undefined
+    addNum -> defination
+    result1 -> undefined
+    result2 -> undefined
+
+3. Execution phase
+    val1 -> 23;
+    val2 -> 47
+    addNum -> creates separates execution context
+        creates new variables environment + execution threads
+        whenever Function execute it creates new box called executional context
+        # Again start from Memory phase
+        1. Memory phase
+        val1 -> undefined
+        val2 -> undefined
+        total -> undefined
+        2. Execution phase
+        num1 -> 23
+        num2 -> 47
+        total -> 70
+        whenever Function execute is finished it deleted by itself
+    return in Global execution context
+
+    addNum -> New variables environment + threads
+    1. Memory phase
+    2. Execution phase
+
+
+
+
+
+Call Stack -> Global environment/Execution context
+whenever function by line comes also goes
+
+when function is under Function
+like two() under one() -> execute as LIFO
+function one(){
+    function two(){
+        function three(){
+            console.log("thw")
+        }
+    }
+}
+
+It Call stack like one two() three() and delete() as three() two() one()
