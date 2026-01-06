@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur Code</title>
+</head>
+
+<body style="background-color: #212121; color: white;">
+    <div class="parent">
+        <!-- this is a comment -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    let parent = document.querySelector(".parent")
+    // console.log(parent);
+    // console.log(parent.children); // HTML collection
+    // console.log(parent.children[1]); // <div class="day">Tuesday</div>
+    // console.log(parent.children[1].innerHTML); // Tuesday
+
+    for (let i = 0; i < parent.children.length; i++) {
+        const element = parent.children[i].innerHTML;
+        // console.log(element);
+    }
+
+    parent.children[1].style.color = "orange"
+    // console.log(parent.firstElementChild)
+    // console.log(parent.lastElementChild)
+
+    const dayOne = document.querySelector(".day") // target the first day Monday
+    // console.log(dayOne);
+    // console.log(dayOne.parentElement); // print parent
+    // console.log(dayOne.nextElementSibling); // print parent
+
+    console.log("NODES: ", parent.childNodes); // Count the line breaks and comment too(11)
+
+
+</script>
+
+</html>
