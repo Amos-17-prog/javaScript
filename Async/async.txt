@@ -1,0 +1,19 @@
+Default JS 
+Javascript is synchronous and single threated language
+
+Execution Context
+Execute one by one at a time
+Each operation wait for the last one to complete before executing
+Call Stack - give Stack
+Memory Heap
+
+Blocking code 
+Block the flow of program
+Read file sync
+If you say wait then the person just wait and do nothing 
+
+Non-Blocking code
+Does not block code
+Read file async
+If you say wait I'll bring you water then the person is working his task 
+
