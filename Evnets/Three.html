@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Chai aur JS</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayDate = function (str) {
+        console.log(str, Date.now());
+    }
+
+    const start = document.querySelector("#start")
+    const stop = document.querySelector("#stop")
+
+    let intervalId;
+    start.addEventListener("click", () => {
+        // setInterval(sayDate, 1000)
+        intervalId = setInterval(sayDate, 1000, "Hi") // here we can separate parameters too
+    })
+
+    stop.addEventListener("click", () => {
+        clearInterval(intervalId)
+    })
+
+    // clearInterval(intervalId) // stop the intervals
+</script>
+
+</html>
