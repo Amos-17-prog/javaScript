@@ -182,3 +182,67 @@ function newGame() {
 
 
 ```
+
+## Project 5 solution 
+
+```javascript
+
+const insert = document.querySelector('#insert');
+
+window.addEventListener('keydown', (e) => {
+  insert.innerHTML = `
+  <div class="color"> 
+  <table>
+  <tr>
+    <th>Key</th>
+    <th>Keycode</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.key === ' ' ? 'Space' : e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+</table>
+
+  </div>
+  `;
+});
+
+
+```
+
+## Project 6 Solution 
+
+```javascript
+
+// generate a rondom color
+
+const randonColor = function () {
+  const hex = '01234567890ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+
+let intervalColors;
+const startChangingColor = function () {
+  if (!intervalColors) {
+    setInterval(changeBgColor, 1000);
+  }
+  changeBgColor = function () {
+    intervalColors = document.body.style.backgroundColor = randonColor();
+  };
+};
+
+const stopChangingColor = function () {
+  clearInterval(intervalColors);
+  intervalColors = null; // this is for cleaner code
+};
+document.querySelector('#start').addEventListener('click', startChangingColor);
+document.querySelector('#stop').addEventListener('click', stopChangingColor);
+
+
+```
